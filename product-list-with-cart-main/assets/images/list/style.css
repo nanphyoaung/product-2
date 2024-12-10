@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s;
+}
+body{
+    width: 100%;
+    background-color: hsl(13, 31%, 94%) ;
+
+
+}
+.container{
+    display: flex;
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 0;
+}
+.container .left{
+    width: 70%;
+}
+.container .right-con{
+    width: 30%;
+}
+.left h1{
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.left .cards{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 25px;
+}
+.left .cards .card .image{
+    position: relative;
+    width: 330px;
+    margin-bottom: 30px;
+}
+.left .cards .card .image:hover img{
+    border: 3px solid red;
+}
+.left .cards .card .image:hover .btn{
+    border: 1px solid red;
+}
+.card .image img{
+    width: 100%;
+    border-radius: 5px;
+}
+.card .btn{
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 45px;
+    background-color: white;
+    border-radius: 35px;
+    outline: none;
+    font-size: medium;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.card .btn:hover{
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+}
+.text p{
+    color: gray;
+    font-size:18px ;
+    margin-bottom: 3px;
+}
+.text h3{
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+.text span{
+    color: red;
+    font-size: 18px;
+}
+.right-con{
+    width: 100%;
+}
+.right h2{
+    color: red;
+}
+.right {
+    position: relative;
+    background-color: white;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+ .right p{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.list{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list img{
+    width: 60px;
+    border-radius: 50%;
+}
+.list .price{
+    color: red;
+}
+.list button{
+    padding: 2px 5px;
+    border: none;
+    cursor: pointer;
+
+}
+.tprice{
+    padding-top:5px ;
+    border-top:1px solid black ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tprice h4{
+    font-size: 20px;
+}
+#tprice{
+    margin-top: 10px;
+    display: none;
+}
+#btn{
+    width: 100%;
+    height: 45px;
+    border-radius:30px ;
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    background-color:hsl(14, 86%, 42%) ;
+    margin-top: 30px;
+    display:none;
+}
+#btn:hover{
+    background-color: white;
+    border: 1px solid hsl(14, 86%, 42%);
+    color: black;
+}
+
+
+
+@media(max-width:1440px){
+    .left .cards{
+        grid-template-columns: repeat(auto-fit,  minmax(230px,1fr));
+    }
+}
+@media(max-width:375px){
+    body{
+        padding: 0 10px;
+    }
+.container{
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+}
+.container .left{
+    width: 94%;
+    margin: 0 auto;
+}
+ .container .right-con{
+        width: 100%;
+    }
+}
